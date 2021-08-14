@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 10| Taylor Futernick</title>
+	<style>
+		body{
+			background-color:green;
+		}
+		h1{
+			text-align: center;
+			font-size: 42pt;
+			color:white;
+		}
+		#scene{
+			width:1000px;
+			height: 500px;
+			background-image: url('scene.jpeg');
+			background-size: cover;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			cursor: url('cloud.png'), auto;
+		}
+		#man{
+			position: absolute;
+			bottom:10px;
+			padding-left: 10px;
+			transition: all 10s;
+		}
+		#man:hover {
+			/*transform: translateX(850px);*/
+			padding-left: 850px;
+			opacity:.95;
+		}
+		#speech p{
+			background-color: white;
+			border-radius: 50%;
+			display: inline-block;
+			text-align: center;
+			padding:10px;
+			font-family: fantasy;
+			border: 2px double black;
+			opacity: .95;
+			position: absolute;
+			top:-110px;
+		
+
+		}
+		#lilBubble{
+			position: absolute;
+			border-radius: 50%;
+			background-color: white;
+			opacity:.95;
+			line-height:.025px;
+			top:75px;
+			right:130px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>A Windy Day!</h1>
+	<div id="scene">
+		<div id="man">
+			<img src="man.gif" alt="man walking">
+			<div id="speech">
+				<p>Wow, <br>it's windy!</p>
+				<div id="lilBubble">
+					<p><br></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" />
+	<title> Assignment 05 | Gallery </title>
+	<style>
+
+		img{
+			height:200px;
+			width: auto;
+			padding: 0;
+			margin: 0;
+		}
+
+		#header {
+				background-image:url('pics/head.jpeg');
+				height: 450px;
+				text-align: center;
+				margin-top: -80px;
+		}
+
+		h1{
+			bottom: 100px;
+			left:500px;
+		}
+
+		#content{
+			background-color: #94B3C5;
+		}
+
+		.row1{
+			height: 225.9px;
+			width: auto;
+			margin-top: 5px;
+		}
+
+		.row2{
+			height:209.7px;
+			width:auto;
+		}
+
+		.row3{
+			height:210px;
+			width: auto;
+		}
+		.row4{
+			height: 242.9px;
+			width: auto;
+		}
+
+		.leftMost{
+			margin-left: 10px;
+		}
+
+		.rightMost{
+			margin-right: 10px;
+		}
+
+		.thumbnail {
+			float: left;
+			overflow: hidden;		
+			/* add relative position */
+			position:relative;
+			margin: 2px;
+			padding: 0px;
+		}
+
+		.overlay {
+			/*background:#000; */
+			background-color: rgba(0, 0, 0, 0.6);
+			color:#fff;
+			position:absolute;
+			top:0;
+			left:0px;
+			right:0px;
+			bottom:3px;
+			visibility:hidden;
+			padding: 0px;
+		}
+
+		.top.overlay{
+			top:5px;
+		}
+
+		.left.overlay {
+			/*background:#000; */
+			left:10px;
+		}
+
+		.right.overlay {
+			/*background:#000; */
+			right:10px;
+		}
+
+		.thumbnail p{
+			position: absolute;
+			top:40%;
+			width: 100%;
+			text-align: center;
+
+		}
+
+		.thumbnail:hover .overlay {
+			visibility:visible;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<h1>&ensp;GALLERY&ensp;</h1>
+	</div>
+
+	<div id="nav-wrapper">
+		<div id="nav">
+			<ul>
+				<li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="index.html#section2">Reviews</a></li>
+						<li><a href="index.html#section3">Similar Series</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html" class="active">Gallery</a></li>
+			</ul>
+			<div class="clearBoth"> </div>
+		</div> <!-- #nav -->
+		</div>
+
+	<div id="content">
+		<div class="thumbnail">
+			<img class="row1 leftMost" src="pics/pic1.jpeg" alt="Jackson and April">
+			<div class="top left overlay">
+				<p>Jackson stops April's wedding</p>
+			</div>
+			<div class="clearBoth"></div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row1" src="pics/pic2.jpeg" alt="Post It">
+			<div class="top overlay">
+				<p>Meredith and Derek write Post-It vows</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row1 rightMost" src="pics/pic7.jpeg" alt="Sophia Born">
+			<div class="top right overlay">
+				<p>Arizona, Mark, and Callie welcome Sophia</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row2 leftMost" src="pics/pic4.jpeg" alt="Surgery">
+			<div class="left overlay">
+				<p>Doctors performing surgery</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row2" src="pics/pic5.png" alt="Izzie LVAD">
+			<div class="overlay">
+				<p>Izzie crying on Denny</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row2 rightMost" src="pics/pic6.jpeg" alt="My person">
+			<div class="right overlay">
+				<p>Meredith and Christina</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row3 leftMost" src="pics/pic3.jpeg" alt="Plane Crash">
+			<div class="left overlay">
+				<p>Doctors get in plane crash</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row3" src="pics/pic8.jpeg" alt="Derek death">
+			<div class="overlay">
+				<p>Derek dies of brain injury</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row3 rightMost" src="pics/pic9.jpeg" alt="Owen, Amelia, and Teddy">
+			<div class="right overlay">
+				<p>Owen, Amelia, and Teddy</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row4 leftMost" src="pics/pic10.jpeg" alt="original 5">
+			<div class="left overlay">
+				<p>Original 5 interns</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row4" src="pics/pic11.jpeg" alt="baseball">
+			<div class="overlay">
+				<p>Doctors play baseball</p>
+			</div>
+		</div>
+
+		<div class="thumbnail">
+			<img class="row4 rightMost" src="pics/pic12.jpeg" alt="gurney">
+			<div class="right overlay">
+				<p>Doctors push patient into surgery</p>
+			</div>
+		</div>
+		<div class="clearBoth"></div>
+	</div>
+
+	<div id="footer">
+			<p>Catch it on <a href="https://www.netflix.com/title/70140391" target="_blank">Netflix!</a></p>
+	</div>
+</body>
+</html>

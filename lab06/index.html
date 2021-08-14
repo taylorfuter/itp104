@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taylor Futernick | Lab 06</title>
+
+	<style>
+		body{
+			background-color: SkyBlue;
+		}
+		#header{
+			width:950px;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: url(images/travel.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			height:350px;
+		}
+
+		#gallery{
+			width:950px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: PaleTurquoise;
+		}
+
+		h1{
+			text-align: center;
+			padding-top: 150px;
+			margin-bottom: 0px;
+			font-size:80pt;
+			color:SteelBlue;
+			font-family: "Brush Script MT";
+			padding-bottom: 0px;
+			line-height: 45px;
+		}
+
+		img{
+			height:299px;
+			width:auto;
+			margin: 6px;
+			border: 5px solid SteelBlue;
+		}
+		#text{
+			height:300px;
+			width:295px;
+			border: 2px dashed SteelBlue;
+			font-size: 24pt;
+			color:SteelBlue;
+			display: inline-block;
+			margin-top: 6px;
+			text-align: center;
+			vertical-align: top;
+		}
+
+		.pic-container{
+			display: inline-block;
+			text-align: center;
+		}
+
+		.pic-container p{
+			margin:0px;
+			display: inline-block;
+			visibility: hidden;
+			background-color:white;
+			color:SteelBlue;
+			text-align: center;
+			padding:5px;
+		}
+
+		.pic-container:hover p{
+			visibility: visible;
+		}
+
+		#gallery img[src="images/plane.png"]{
+			border:none;
+			width:300px;
+			height:auto;
+			margin:0px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<h1>Our Travels ♡</h1>
+	</div>
+
+	<div id="gallery">
+		<div class="pic-container">
+			<div class="pic">
+				<img src="images/mia.jpeg" alt="Miami">
+			</div>
+			<p>Miami, FL</p>
+		</div>
+
+		<img src=images/plane.png alt="plane">
+
+		<div class="pic-container">
+			<div class="pic">
+				<img src="images/pr.jpeg" alt="Puerto Rico">
+			</div>
+			<p>San Juan, PR</p>
+		</div>
+
+		<div class="pic-container">
+			<div class="pic">
+				<img src="images/col.jpeg" alt="Colorado">
+			</div>
+			<p>Snow Mass, CO</p>
+		</div>
+
+		<div id="text">
+			<h2><br>One year of adventures<br>☺</h2>
+		</div>
+
+		<div class="pic-container">
+			<div class="pic">
+				<img src="images/bos.jpeg" alt="Boston">
+			</div>
+			<p>Boston, MA</p>
+		</div>
+
+		<div class="pic-container">
+			<div class="pic">
+				<img src="images/pit.jpeg" alt="Pittsburgh">
+			</div>
+			<p>Pittsburgh, PA</p>
+		</div>
+
+		<img src=images/plane.png alt="plane">
+
+		<div class="pic-container">
+			<div class="pic">
+				<img src="images/ny.jpeg" alt="New York">
+			</div>
+			<p>Scarborough, NY</p>
+		</div>
+	</div>
+</body>
+</html>
