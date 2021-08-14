@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="software engineer, web portfolio, resume, Taylor Futernick">
+	<meta name="description" content="Taylor Futernick's Web Portfolio">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Taylor Futernick">
+	<title>Taylor Futernick | Final Project</title>
+	<link href="dist/css/lightbox.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #16262E;
+			height:200%;
+		}
+
+		html{
+			scroll-behavior: smooth;
+		}
+		#header{
+			background-image: url("images/header.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			height:770px;
+			margin-top: -20px;
+			color:white;
+			text-align: center;
+		}
+
+		#header img{
+			height:60px;
+			width:auto;
+		}
+
+		.whiteMail{
+			height:60px;
+			width:60px;
+			background-image: url("images/mail.png");
+			background-size: cover;
+			display: inline-block;
+		}
+
+		.whiteMail:hover{
+			background-image: url("images/mail copy.png");
+		}
+
+		.whiteGithub{
+			height:60px;
+			width:60px;
+			background-image: url("images/github.png");
+			background-size: cover;
+			display: inline-block;
+		}
+
+		.whiteGithub:hover{
+			background-image: url("images/github copy.png");
+		}
+
+		.whiteLinkedin{
+			height:60px;
+			width:60px;
+			background-image: url("images/linkedin.png");
+			background-size: cover;
+			display: inline-block;
+		}
+
+		.whiteLinkedin:hover{
+			background-image: url("images/linkedin copy.png");
+		}
+
+		#icons{
+			position: absolute;
+			top: 450px;
+			right:120px;
+			display:inline-block;
+		}
+
+		h1{
+			font-family: 'Archivo Black', sans-serif;
+		}
+
+		#header h1{
+			font-size: 35pt;
+			position: absolute;
+			right:18px;
+			top:220px;
+		}
+
+		#header u{
+			color:#F0978B;
+		}
+
+		#header h2{
+			font-family: 'Open Sans', sans-serif;
+			font-size: 18pt;
+			position: absolute;
+			right:48px;
+			top:345px;
+		}
+		
+		#nav-wrapper {
+			background-color: #E2E0E3;
+			position:sticky;
+			top:0;
+			z-index: 5;
+		}
+
+		#nav {
+			width:600px;
+			margin-left: auto;
+			margin-right: auto;	
+			font-size:0;
+		}
+
+		#nav a {
+			text-decoration: none;
+			background-color: #E2E0E3;
+			font-family: 'Open Sans', sans-serif;
+			width: 120px;
+			height: 50px;
+			line-height: 50px;
+			display: inline-block;
+			text-align: center;	
+			color: black;
+			font-size:21px;
+
+		}
+		
+		#nav a:hover {
+			background-color: #C7AB9D;
+			color: white;
+			opacity: 1;
+		}
+
+		#nav a.active {
+			background-color:#377DC3;
+			color:#fff;
+		}
+
+		.content{
+			width:1050px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.content h1{
+			font-size: 35pt;
+			position: absolute;
+			top:25px;
+		}
+
+		#about{
+			background-color: #DBC2CF;
+			position: relative;
+			color:#F0978B;
+		}
+
+		.content h2{
+			position: absolute;
+			top:0px;
+			font-family: 'Open Sans', sans-serif;
+			color:white;
+		}
+
+		#about h3{
+			font-family: 'Archivo Black', sans-serif;
+			color:white;
+			font-size: 18pt;
+			padding:0;
+			margin:0;
+		}
+
+		#aboutWords{
+			padding-top:125px;
+			padding-left:300px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: bold;
+			font-size: 14pt;
+			color:black;
+		}
+
+
+		.left{
+			width: 350px;
+			float: left;
+			padding: 10px;
+		}
+
+		.right{
+			width: 300px;
+			float: left;
+			margin-left:40px;
+			border: 5px dotted #F0978B;
+			padding:15px;
+		}
+
+		#about img{
+			
+			height:270px;
+			width:auto;
+			position:absolute;
+			top:150px;
+		}
+
+		#education{
+			height:550px;
+			background-color: #99a4b2;
+			position: relative;
+			color:#F0978B;
+		}
+
+		#education label{
+			display: block;
+			margin: 0px;
+			padding:4px;
+			color:#2E4756;
+			width:400px;
+			margin-left:250px;
+			padding-bottom: 40px;
+			margin-top:-10px;
+		}
+
+		#education .vl{
+			position: absolute;
+			left:670px;
+			top:30px;
+			height:150px;
+			border-left: 6px solid lightgrey;
+		}
+
+		#education .vl2{
+			position: absolute;
+			left:670px;
+			top:180px;
+			height:150px;
+			border-left: 6px solid #2E4756;
+		}
+
+		#education span{
+			margin-top: 0px;
+			font-size: .75em;
+		}
+
+		#usc:checked + label + .popUp{
+			display:block;
+		}
+
+		#usc:checked + label{
+			color:white;
+		}
+
+		#usc:hover + label{
+			background-color:rgba(139, 158, 172,.7);
+		}
+
+		#cbhs + label{
+			margin-top: -20px;
+		}
+
+		#cbhs:checked + label{
+			color:white;
+		}
+
+		#cbhs:hover + label{
+			background-color:rgba(139, 158, 172,.7);
+		}
+
+		#cbhs:checked ~ .vl{
+			position: absolute;
+			left:670px;
+			top:30px;
+			height:150px;
+			border-left: 6px solid #2E4756;
+		}
+
+		#cbhs:checked ~ .vl2{
+			position: absolute;
+			left:670px;
+			top:180px;
+			height:150px;
+			border-left: 6px solid lightgrey;
+		}
+
+		#cbhs:checked + label + .popUp{
+			display:block;
+		}
+
+		#edContent{
+			font-size: 22pt;
+			position: absolute;
+			top:110px;
+			left:0px;
+			width:900px;
+			text-align: center;
+		}
+
+		.popUp{
+			display:none;
+			font-size: 14pt;
+			position: absolute;
+			top:5px;
+			left:670px;
+			width:600px;
+			float: right;
+			color:black;
+		}
+
+		.popUp em{
+			color: #2E4756;
+			font-weight: bold;
+		}
+
+		.popUp h3{
+			margin-bottom: 10px;
+			color:#2E4756;
+		}
+
+		.popUp li{
+			text-align: left;
+			margin:5px;
+		}
+
+		.hide{
+			opacity: 0;
+		}
+
+
+		#skills{
+			background-color: #3C7A89;
+			position: relative;
+			color:#F0978B;
+			padding-bottom: 50px;
+		}
+
+		.ease-in {
+			transition: all 1s ease-in;
+		}
+
+		.box {
+			background-color: #2E4756;
+			width: 50px;
+			height: 40px;
+			text-align: center;
+			line-height: 50px;
+			display: inline-block;
+		}
+
+		th {
+			text-align: right;
+			font-weight: normal;
+			color:white;
+		}
+
+		td {
+			padding: 10px 0px 10px 10px;
+			position: relative;
+		}
+
+		td em{
+			padding-left: 15px;
+			position:absolute;
+			color:white;
+			bottom:25px; 
+		}
+
+		table{
+			padding-top: 120px;
+		}
+
+		#skills:hover .box90 {
+			width: 810px;
+		}
+
+		#skills:hover .box80 {
+			width: 720px;
+		}
+
+		#skills:hover .box70 {
+			width: 630px;
+		}
+
+		#skills:hover .box40 {
+			width: 360px;
+		}
+
+
+		#projects{
+			background-color: #2E4756;
+			position: relative;
+			color:#F0978B;
+			padding-bottom: 5px;
+		}
+
+		.thumbnail {
+			float: left;
+			overflow: hidden;		
+			/* add relative position */
+			position:relative;
+			margin: 0px;
+			padding: 0px;
+		}
+
+
+		.overlay{
+			background-color: rgb(46, 71, 86);
+			color:#fff;
+			position:absolute;
+			top:0;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			visibility:hidden;
+			padding: 0px;
+			text-align: center;
+			pointer-events: none;
+		}
+
+		#projects img{
+			height:250px;
+			width:250px;
+			object-fit: cover;
+			margin:-3px;
+			border: 0px solid transparent;
+			padding:0px;
+		}
+
+		#projects img[src="images/poker.png"]{
+			object-position: 35% 50%;
+		}
+
+		#projects img[src="images/tetris.png"]{
+			object-position: 50% 90%;
+		}
+
+		#projectRow1{
+			padding-top:130px;
+			margin-left: auto;
+			margin-right: auto;
+			width:490px;
+		}
+
+		#projectRow2{
+			margin-top: -5px;
+			margin-left: auto;
+			margin-right: auto;
+			width:490px;
+			margin-bottom: 10px;
+		}
+
+		.thumbnail:hover .overlay{
+			visibility: visible;
+		}
+
+		.thumbnail:hover .topR{
+			transform: translateY(50px);
+			transition: all 1s;
+		}
+
+		.thumbnail:hover .bottomR{
+			transform: translateY(-50px);
+			transition: all 1s;
+		}
+
+		.topR p{
+			font-size:14pt;
+			font-weight: bold;
+			margin:0px;
+			padding: 0px;
+		}
+
+		.topR em{
+			line-height: 3px;
+			margin:0px;
+			padding: 0px;
+			color:#F0978B;
+			display: inline-block;
+		}
+
+		.bottomR p{
+			color:slategrey;
+			border:1px solid #F0978B;
+			display: inline-block;
+			padding:10px;
+		}
+
+		#contact{
+			margin-top: -25px;
+			background-color: #16262E;
+			position: relative;
+			color:#F0978B;
+		}
+
+		#contact p{
+			padding-top: 150px;
+			color:white;
+		}
+
+		input{
+			width: 600px;
+			height: 30px;
+			background-color: #121b21;
+			border:none;
+			margin:1px;
+			color:lightgray;
+		}
+
+		textarea{
+			width: 602px;
+			background-color: #121b21;
+			border:none;
+			margin:1px;
+			color:lightgray;
+		}
+
+		button{
+			margin-bottom: 120px;
+			background-color: #121b21;
+			color:lightgray;
+			border:1px solid #121b21;
+		}
+
+		.whiteArrow{
+			height:60px;
+			width:60px;
+			background-image: url("images/arrow.png");
+			background-size: cover;
+			display: inline-block;
+			position: absolute;
+			left:690px;
+			bottom: 50px;
+			z-index: 3;
+
+		}
+
+		form p{
+			position: absolute;
+			left:650px;
+			bottom: 2px;
+		}
+
+		.whiteArrow:hover{
+			background-image: url("images/arrow copy.png");
+		}
+
+		.clearFloat{
+			clear: both;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<h1>Hello, my name is <br><u>Taylor Futernick.</u></h1>
+		<h2>I'm an aspiring software engineer.</h2>
+		<div id="icons">
+			<a href = "mailto:tfuterni@usc.edu"><div class="whiteMail"></div></a>
+			<a href="https://www.linkedin.com/in/taylor-futernick-835844173/" target="_blank"><div class="whiteLinkedin"></div></a>
+			<a href="https://github.com/taylorfuter" target="_blank"><div class="whiteGithub"></div></a>
+		</div>
+	</div>
+
+	<div id="nav-wrapper">
+		<div id="nav">
+				<a href="index.html#about">About</a>
+				<a href="index.html#education">Education</a>
+				<a href="index.html#skills">Skills</a>
+				<a href="index.html#projects">Projects</a>
+				<a href="index.html#contact">Contact</a>
+		</div> <!-- #nav -->
+	</div>
+
+	<div id="about">
+		<div class="content">
+			<h2>About</h2>
+			<h1>Let me introduce myself.</h1>
+			<img src="images/selfie.jpeg" alt="selfie">
+			<div id="aboutWords">
+				<div class='left'>
+					<h3>Thanks for checking out my page!</h3>
+					<p>I grew up in South Florida, but now find myself in my second year of studying Computer Science and Business Administration at the University of Southern California, where I get to combine my passion for creating cool projects with my love of problem solving and critical thinking, and all while enjoying sunny California! </p>
+					<p>Some fields that excite me are data science, software engineering, machine learning, and organizational behavior.</p>
+				</div>
+				<div class="right">
+					<h3>My Personal Interests</h3>
+					<p>When I'm not coding, you can catch me doing one of the following:</p>
+					<ul>
+						<li>Playing tennis</li>
+						<li>Going to the beach</li>
+						<li>Skiing or Snowboarding</li>
+						<li>Hanging out with friends and family</li>
+						<li>Binging TV shows on Netflix</li>
+						<li>Gaming</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearFloat"></div>
+		</div>
+	</div>
+
+	<div id="education">
+		<div class="content">
+			<h2>Education</h2>
+			<h1>Learn about my learning.</h1>
+				<div id="edContent">
+					<input type="radio" id="usc" name="school" value="usc" class="hide" checked>
+					<label for="usc"><br>University of Southern California<br><span>Los Angeles, CA</span></label>
+					<div class="popUp" id="uscPop">
+						<h3>B.S. in Computer Science and Business Administration</h3>
+						<em>August 2019-May 2023</em>
+						<ul>
+							<li>GPA: 3.82</li>
+							<li>Activities and Socieites: Data Science Club, Women in Engineering, USC Hillel, and Alpha Chi Omega Sorority</li>
+							<li>Relevant Coursework: Data Structures and Object Oriented Programming, Discrete Methods in Computer Science, Foundations of Accounting, Introduction to Algorithms and Theory of Computing, Linear Algebra and Linear Differential Equations, Macroeconomics for Business, Marketing Fundamentals, Microeconomics for Business, Organizational Behavior and Leadership, Principles of Software Development, and Web Publishing</li>
+						</ul>
+					</div>
+					<input type="radio" id="cbhs" name="school" value="cbhs" class="hide">
+					<label for="cbhs"><br>Cypress Bay High School<br><span>Weston, FL</span></label>
+					<div class="popUp" id="cbhsPop">
+						<h3>High School Graduate</h3>
+						<em>August 2015-May 2019</em>
+						<ul>
+							<li>GPA: 5.4 weighted/3.8 unweighted</li>
+							<li>Class rank: 24 out of 1107 </li>
+							<li>Activities and Socieites: DECA, Mu Alpha Theta, Science National Honors Society, and Habitat for Humanity</li>
+							<li>Relevant Coursework: AP Computer Science (5), AP Physics C: Mechanics (5), AP Calculus BC (5), AP Statistics (5), AP Microeconomics (5), AICE Business A Level (A), AICE Computer Science A Level (A), AP Biology (5), AP Psychology (5), AP US History (5), AP Comparative Politics (5), AP US Government (5), AP Physics C: Electricity and Magnetism (4), AP Macroeconomics (4), AP Physics 1 (4)</li>
+						</ul>
+					</div>
+					<div class="vl"></div>
+					<div class="vl2"></div>
+				</div>
+		</div>
+	</div>
+
+	<div id="skills">
+		<div class="content">
+			<h2>Skills</h2>
+			<h1>She's got skills too.</h1>
+			<table>
+				<tr>
+					<th>Java:</th>
+					<td>
+						<div class="ease-in box box90"></div>
+						<em>90%</em>
+					</td>
+				</tr>
+				<tr>
+					<th>C++:</th>
+					<td>
+						<div class="ease-in box box80"></div>
+						<em>80%</em>
+					</td>
+				</tr>
+				<tr>
+					<th>Python:</th>
+					<td>
+						<div class="ease-in box box70"></div>
+						<em>70%</em>
+					</td>
+				</tr>
+				<tr>
+					<th>HTML:</th>
+					<td>
+						<div class="ease-in box box80"></div>
+						<em>80%</em>
+					</td>
+				</tr>
+				<tr>
+					<th>CSS:</th>
+					<td>
+						<div class="ease-in box box80"></div>
+						<em>80%</em>
+					</td>
+				</tr>
+				<tr>
+					<th>SQL:</th>
+					<td>
+						<div class="ease-in box box40"></div>
+						<em>40%</em>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="projects">
+		<div class="content">
+			<h2>Past Projects</h2>
+			<h1>Check out my work.</h1>
+			<div id="projectRow1">
+				<div class="thumbnail">
+					<a href="images/poker.gif" data-lightbox="games" data-title="<h1>Texas Hold 'Em</h1>Texas Hold 'Em game developed for our final project of CSCI 201 at USC during Fall 2020. I collaborated with 5 other students to create the project in about 6 weeks. It features multithreading to allow multiple people to play at once, a database for users to log in, and a GUI that is friendly to the user. We also coded blackjack for guests to play.<br><br><a href='https://github.com/taylorfuter/TexasHoldEm' target='_blank'>Click here to download!</a>"> <img src="images/poker.png" alt="Texas Hold 'Em"></a>
+					<div class="overlay">
+						<div class="topR">
+							<p>Texas Hold 'Em</p>
+							<em>Java/SQL/JDBC/libGDX</em>
+						</div>
+						<br><br><br><br><br><br><br>
+						<div class="bottomR"><p>Fall 2020</p></div>
+					</div>
+				</div>
+
+				<div class="thumbnail">
+					<a href="images/pacwoman.gif" data-lightbox="games" data-title="<h1>Ms. PacWoman</h1>Term project developed at Carnegie Mellon Pre-college program during summer of 2017. I coded a version of the classic PacMan game and used basic AI for the ghosts and a user-friendly GUI.<br><br><a href='https://github.com/taylorfuter/Ms.PacWoman' target='_blank'>Click here to download!</a>"><img src="images/pacman.png" alt="Ms. PacWoman"></a>
+					<div class="overlay">
+						<div class="topR">
+							<p>Ms. PacWoman</p>
+							<em>Python</em>
+						</div>
+						<br><br><br><br><br><br><br>
+						<div class="bottomR"><p>Summer 2017</p></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="projectRow2">
+
+				<div class="thumbnail">
+					<a href="images/tetris.gif" data-lightbox="games" data-title="<h1>Tetris</h1>Tetris game developed at Carnegie Mellon Pre-college program during summer of 2017. This was my introduction to coding GUI's. <br><br><a href='https://github.com/taylorfuter/Tetris' target='_blank'>Click here to download!</a>"><img src="images/tetris.png" alt="Tetris"></a>
+					<div class="overlay">
+						<div class="topR">
+							<p>Tetris</p>
+							<em>Python</em>
+						</div>
+						<br><br><br><br><br><br><br>
+						<div class="bottomR"><p>Summer 2017</p></div>
+					</div>
+				</div>
+
+				<div class="thumbnail">
+					<a href="images/web.gif" data-lightbox="games" data-title="<h1>Web Publishing Homepage</h1>Homepage for my ITP 104 Web Publishing class taken during Spring 2021. This showcases my labs and assignments that I've created throughout the semester.<br><br><a href='https://viterbi-web.usc.edu/~tfuterni/itp104/' target='_blank'>Click here to view!</a>"><img src="images/web.png" alt="Web Publishing Homepage"></a>
+					<div class="overlay">
+						<div class="topR">
+							<p>Web Development Homepage</p>
+							<em>HTML/CSS</em>
+						</div>
+						<br><br><br><br><br><br><br>
+						<div class="bottomR"><p>Spring 2021</p></div>
+					</div>
+				</div>
+
+			</div>
+			<div class="clearFloat"><br><br></div>
+		</div>
+	</div>
+
+	<div id="contact">
+		<div class="content">
+			<h2>Contact</h2>
+			<h1>Let's get in touch.</h1>
+			<p>Need anything built, want to work together, or simply want to have a chat?<br>
+			   Drop me an e-mail at tfuterni@usc.edu or simply fill out the form below and I will reply to you soon!</p>
+			<form>
+				<div class="form-row">
+					<label for="name"></label>
+					<input id="name" type="text" placeholder="Name" required>
+				</div>
+
+				<div class="form-row">
+					<label for="email"></label>
+					<input id="email" type="text" placeholder="Email" required>
+				</div>
+
+				<label for="message"></label>
+				<textarea id="message" placeholder="Your message" rows="8" required></textarea>
+				<br>
+				<button type="reset">Reset</button>
+				<button type="submit">Submit</button>
+				<a href="index.html#header"><div class="whiteArrow"></div></a>
+				<p>©2021 Taylor Futernick</p>
+			</form>
+		</div>
+	</div>
+	<script src="dist/js/lightbox-plus-jquery.js"></script>
+</body>
+</html>
